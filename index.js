@@ -8,7 +8,7 @@ function newTask(title, description) {
 };
 
 function logTaskState(task) {
-  console.log(`${title} has${complete ? " " : " not "}been completed`);
+  console.log(`${task.title} has${task.complete ? " " : " not "}been completed`);
 };
 
 function completeTask(task) {
@@ -20,5 +20,9 @@ function completeTask(task) {
 const task1 = newTask("Clean Cat Litter", "Take all the 💩 out of the litter box"); // task 0
 const task2 = newTask("Do Laundry", "😨");
 const task3 = [task1, task2];
+
+logTaskState(task1);
+completeTask(task1);
+logTaskState(task1);
 
 console.log(task3);
