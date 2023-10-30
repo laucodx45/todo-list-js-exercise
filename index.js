@@ -1,14 +1,11 @@
-// Arrays to keep track of each task's state
-const taskTitles = [];
-const taskComplete = [];
-const taskDescription = [];
 
-// Create a new task by adding to the arrays
-// A new task will be created as incomplete
 function newTask(title, description) {
-  taskTitles.push(title);
-  taskComplete.push(false);
-  taskDescription.push(description);
+  const task = {
+    title: title,
+    description: description,
+    complete: false
+  }
+  return task;
 }
 
 // Mark a task as complete by setting the task's status in the `taskComplete` array to `true`
